@@ -1,4 +1,4 @@
-# Wordpress Logger Activity Plugin
+# WordPress Logger Activity Plugin
 This plugin logs user activity to a log file to a user preferred location.
 # Instructions
 1. Upload plugin to your WordPress installation.
