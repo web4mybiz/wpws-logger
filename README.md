@@ -1,6 +1,6 @@
 # Wordpress Logger Activity Plugin
 This plugin logs user activity to a log file to a user preferred location.
-# Instruction
+# Instructions
 1. Upload plugin to your WordPress installation.
 2.Activate plugin
 3. Go to Settings -> Wordpress White Security Logger
