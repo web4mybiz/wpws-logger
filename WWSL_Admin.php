@@ -28,12 +28,18 @@ class WordpressWhiteSecurityLogger_Admin{
 
     }
 
-    function WWSL_RenderForm(){
-        $options = get_option( 'wwsl_option_name' );
-      
-        echo get_home_path()." <input type='text' name='wwsl_option_name[wwsl_logfile_path]' value='".$options['wwsl_logfile_path']."' maxlength='100' size='50' placeholder='custom-folder/logfiles'>";
-
-     }
+    function WWSL_RenderForm() {
+        $options = get_option('wwsl_option_name');
+    
+        // Sanitize the option value before using it in the output
+        $logfile_path = isset($options['wwsl_logfile_path']) ? esc_attr($options['wwsl_logfile_path']) : '';
+    
+        // Use a more descriptive option name
+        $home_path = esc_url(get_home_path());
+    
+        // Output the form field
+        echo esc_html($home_path) . ' <input type="text" name="wwsl_option_name[wwsl_logfile_path]" value="' . esc_attr($logfile_path) . '" maxlength="100" size="50" placeholder="custom-folder/logfiles">';
+    }
 
      function WWSL_SettingsPage(){?>
         <div class="wrap">
